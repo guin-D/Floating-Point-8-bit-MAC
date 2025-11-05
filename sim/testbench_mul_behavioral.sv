@@ -3,7 +3,7 @@
 //======================================================================
 `timescale 1ns / 1ps
 
-module testbench_mul;
+module testbench_mul_behavioral;
 
     // --- Tín hi?u (Signals) ---
     reg  [7:0] a_tb;       // ??u vào A
@@ -15,7 +15,7 @@ module testbench_mul;
     
     // --- Kh?i t?o DUT (Instantiate DUT) ---
     // (DUT = Device Under Test)
-    FP8_multiplier dut (
+    FP8_multiplier_behavioral dut (
         .a(a_tb),
         .b(b_tb),
         .product(product_tb)
@@ -24,13 +24,13 @@ module testbench_mul;
     // --- Lu?ng Test (Test Flow) ---
     initial begin
         $display("-------------------------------------------------");
-        $display("B?t ??u Testbench cho FP8_multiplier (E4M3)...");
+        $display("B?t ??u Testbench cho FP8_multiplier_behavioral (E4M3)...");
         $display("??nh d?ng: S-EEEE-MMM (Bias = 7)");
         $display("-------------------------------------------------");
 
         // B?t ??u dump waveform (tùy ch?n)
-        $dumpfile("tb_FP8_multiplier.vcd");
-        $dumpvars(0, testbench_mul);
+        $dumpfile("tb_FP8_multiplier_behavioral.vcd");
+        $dumpvars(0, testbench_mul_behavioral);
 
         // Kh?i t?o
         a_tb = 8'b0;
