@@ -21,3 +21,11 @@ The datapath of the FP8 MAC unit is meticulously designed to compute the operati
     *   **Mantissa Addition/Subtraction:** Computes the sum or difference based on the sign bits.
     *   **Normalization:** Leading Zero Detection (LZD) logic is implemented to left-shift the result and adjust the exponent accordingly, ensuring standard IEEE-like format compliance.
 3.  **Pipeline Registers:** Inserted strategically across the datapath to break critical paths and achieve high clock frequencies.
+
+### 👥 Team Members
+
+| Name | Role | 
+| :--- | :--- | 
+| **Vũ Anh Tuấn** | Core Member | 
+| **Nguyễn Tiến Dũng** | Core Member |
+| **Phạm Văn Duy** | Core Member |
